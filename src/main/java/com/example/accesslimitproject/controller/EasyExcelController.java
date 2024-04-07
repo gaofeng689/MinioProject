@@ -12,7 +12,8 @@ public class EasyExcelController {
     @GetMapping("read")
     public String read(){
         String filePath ="C:\\Users\\admin\\Desktop\\给高锋\\easyexcel.xlsx";
-        EasyExcel.read(filePath, DemoData.class,new DemoDataListener()).sheet().doRead();
+//        EasyExcel.read(filePath, DemoData.class,new DemoDataListener()).sheet().doRead();
+        EasyExcel.read(filePath, DemoData.class,new DemoDataListener()).doReadAll();
         return "success";
     }
 }
